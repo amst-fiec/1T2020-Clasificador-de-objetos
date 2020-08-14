@@ -23,13 +23,7 @@ public class IdentObjetoFragment extends Fragment {
         identObjetoViewModel =
                 ViewModelProviders.of(this).get(IdentObjetoViewModel.class);
         View root = inflater.inflate(R.layout.fragment_ident_objeto, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        identObjetoViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }
