@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -34,7 +34,7 @@
         android:background="@drawable/round"
         android:text="Salir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edContrasena" />
 
     <Button
         android:id="@+id/button3"
@@ -43,21 +43,22 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/round"
+        android:onClick="Acceder"
         android:text="Acceder"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edContrasena" />
 
     <ImageView
         android:id="@+id/foto"
         android:layout_width="192dp"
         android:layout_height="173dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLoginGoogle" />
 
     <EditText
-        android:id="@+id/editTextNumberPassword"
+        android:id="@+id/edContrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -66,7 +67,7 @@
         android:hint="contraseña"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsuario" />
 
     <Button
         android:id="@+id/btnLoginGoogle"
@@ -89,7 +90,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

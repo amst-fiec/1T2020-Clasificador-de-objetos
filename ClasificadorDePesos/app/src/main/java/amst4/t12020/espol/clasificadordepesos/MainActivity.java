@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -26,8 +28,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
+    //Variables para nuestro login
+    private EditText nombre,pasdword;
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -40,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+        //Hilo usado para mostrar el splahs activity, luego de esto
+        //no es recomendable dormir al hilo en el mainactivity
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -48,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        //isntaciamos nuestros edistext de sesion
+        nombre=(EditText)findViewById(R.id.etUsuario);
+        pasdword=(EditText)findViewById(R.id.edContrasena);
+
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("532856539478-8v7llo0hoopoc26gvpq0kgr31tem2i6q.apps.googleusercontent.com")
@@ -70,6 +86,27 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //to remove the action bar (title bar)
         getSupportActionBar().hide();
+    }
+
+    //Metodo para el boton acceder
+
+    public void Acceder(View view){
+        HashMap<String,String> datos= new HashMap<>();
+        datos.put("jadriandelgado17@gmail.com","Hola123");
+
+        String nombreV=nombre.getText().toString();
+        String password=pasdword.getText().toString();
+
+        if(nombre.length()==0){
+            Toast.makeText(this,"Debe Ingresar un usuaio valido", Toast.LENGTH_LONG).show();
+        }
+
+        //if (password != datos.get("jadriandelgado17@gmail.com")){
+        if (password.length() == 0 ){
+            Toast.makeText(this,"Contraseña Incorrecta",Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this,"Contraseña correcta",Toast.LENGTH_LONG).show();
+        }
     }
 
     private void signIn() {
