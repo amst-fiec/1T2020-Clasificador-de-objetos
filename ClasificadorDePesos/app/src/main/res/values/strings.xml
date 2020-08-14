@@ -10,4 +10,6 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_ident_objetos">Identificar objetos</string>
+    <string name="textview">TextView</string>
+    <string name="button">Button</string>
 </resources>
