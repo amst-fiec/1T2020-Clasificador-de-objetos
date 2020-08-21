@@ -68,11 +68,11 @@ public class HomeActivity extends AppCompatActivity {
         TextView navUsermail = (TextView) headerView.findViewById(R.id.tvCorreoUser);
         navUsermail.setText(correoUser);
         ImageView navUserPhoto = (ImageView) headerView.findViewById(R.id.imgvwFotoUser);
-        Picasso.get()
+        /*Picasso.get()
                 .load(fotoUser)
                 .placeholder(R.drawable.ic_menu_camera)
                 .error(R.drawable.ic_menu_gallery)
-                .into(navUserPhoto);
+                .into(navUserPhoto);*/
 
 
 

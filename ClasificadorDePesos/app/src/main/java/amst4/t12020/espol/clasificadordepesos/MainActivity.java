@@ -90,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
 
     //Metodo para el boton acceder
 
+    public void ingresar(View view){
+        Intent intent =  new Intent(this, mostrarResultados.class);
+        startActivity(intent);
+    }
+
     public void Acceder(View view){
         HashMap<String,String> datos= new HashMap<>();
         datos.put("jadriandelgado17@gmail.com","Hola123");

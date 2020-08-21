@@ -14,4 +14,9 @@
     <string name="button">Button</string>
     <string name="identificar">Identificar</string>
     <string name="resultado">RESULTADO</string>
+    <string name="mostrar_resultados">Mostrar resultados</string>
+    <string name="todo">TODO</string>
+    <string name="descripcion">DESCRIPCION</string>
+    <string name="nombre">nombre</string>
+    <string name="peso_objeto">Peso Objeto</string>
 </resources>
