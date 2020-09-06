@@ -43,7 +43,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/round"
-        android:onClick="Acceder"
+        android:onClick="ingresar"
         android:text="Acceder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edContrasena" />

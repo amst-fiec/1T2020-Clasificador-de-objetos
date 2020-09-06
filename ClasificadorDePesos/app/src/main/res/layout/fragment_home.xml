@@ -2,59 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     tools:context=".Entrenamiento">
 
-    <Button
-        android:id="@+id/button"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="92dp"
-        android:text="Acerto"
-        android:background="@drawable/round"
+        android:src="@drawable/logo3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="77dp"
-        android:text="Fallo"
-        android:background="@drawable/round"
+    <ImageView
+        android:id="@+id/imgFotoObj"
+        android:layout_width="324dp"
+        android:layout_height="282dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home"
+        app:srcCompat="@drawable/bot_final" />
 
     <TextView
         android:id="@+id/text_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="85dp"
-        android:text="Entrenamiento Bot"
-        android:textSize="30sp"
+        android:layout_marginTop="12dp"
+        android:text="Sense un objeto!"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="324dp"
-        android:layout_height="282dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="44dp"
+    <TextView
+        android:id="@+id/txt_peso_objeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Aqui aparecera el peso de su objeto!"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_home"
-        app:srcCompat="@drawable/bot_final" />
+        app:layout_constraintTop_toBottomOf="@+id/imgFotoObj" />
+
+    <Button
+        android:id="@+id/btn_sensar_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sensar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_peso_objeto" />
+
+    <TextView
+        android:id="@+id/txt_precision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precision Actual"
+        app:layout_constraintBottom_toTopOf="@+id/imgFotoObj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

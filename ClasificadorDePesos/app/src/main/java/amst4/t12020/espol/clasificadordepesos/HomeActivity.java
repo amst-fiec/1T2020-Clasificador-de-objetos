@@ -34,8 +34,6 @@ public class HomeActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,15 +42,6 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         mAuth = FirebaseAuth.getInstance();
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -63,18 +52,18 @@ public class HomeActivity extends AppCompatActivity {
         correoUser = getIntent().getExtras().getString("correoUser");
         fotoUser   = getIntent().getExtras().getString("uriFotoUser");
 
+
         TextView navUsername = (TextView) headerView.findViewById(R.id.tvNombreUser);
         navUsername.setText(nombreUser);
         TextView navUsermail = (TextView) headerView.findViewById(R.id.tvCorreoUser);
         navUsermail.setText(correoUser);
+
         ImageView navUserPhoto = (ImageView) headerView.findViewById(R.id.imgvwFotoUser);
-        Picasso.get()
-                .load(fotoUser)
-                .placeholder(R.drawable.ic_menu_camera)
-                .error(R.drawable.ic_menu_gallery)
-                .into(navUserPhoto);
 
-
+        Picasso.get().load(fotoUser)
+                     .placeholder(R.drawable.ic_menu_camera)
+                     .error(R.drawable.ic_menu_gallery)
+                     .into(navUserPhoto);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -86,6 +75,9 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

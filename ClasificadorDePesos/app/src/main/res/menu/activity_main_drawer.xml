@@ -9,6 +9,6 @@
             android:title="Home" />
         <item
             android:id="@+id/nav_ident_objeto"
-            android:title="Identificar Objeto" />
+            android:title="Entrenamiento" />
     </group>
 </menu>

@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
         //Hilo usado para mostrar el splahs activity, luego de esto
         //no es recomendable dormir al hilo en el mainactivity
         try {
@@ -89,6 +86,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Metodo para el boton acceder
+
+    public void ingresar(View view){
+        Intent intent =  new Intent(this, mostrarResultados.class);
+        startActivity(intent);
+    }
 
     public void Acceder(View view){
         HashMap<String,String> datos= new HashMap<>();

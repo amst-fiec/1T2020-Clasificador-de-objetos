@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".IdentObjetoViewModel">
+
+    <TextView
+        android:id="@+id/txt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Articulo"
+        app:layout_constraintBottom_toTopOf="@+id/img_foto_articulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/logo3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_foto_articulo"
+        android:layout_width="330dp"
+        android:layout_height="232dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/balanzaprueba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/txt_peso_articulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Peso Articulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto_articulo" />
+
+    <Button
+        android:id="@+id/btn_seleccionar"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        android:text="Seleccionar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_peso_articulo" />
+
+    <Button
+        android:id="@+id/btn_anterior"
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:text="ant"
+        app:layout_constraintEnd_toStartOf="@+id/btn_seleccionar"
+        app:layout_constraintTop_toTopOf="@+id/btn_seleccionar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Seleccione si este es su objeto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_seleccionar" />
+
+    <Button
+        android:id="@+id/btn_siguiente"
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:text="sgt"
+        app:layout_constraintStart_toEndOf="@+id/btn_seleccionar"
+        app:layout_constraintTop_toTopOf="@+id/btn_seleccionar" />
+
+    <TextView
+        android:id="@+id/txt_num_articulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="X/X"
+        app:layout_constraintBottom_toTopOf="@+id/btn_seleccionar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_peso_articulo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
